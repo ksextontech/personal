@@ -1,3 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* the width and height specified for elements includes padding and border  */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 10px auto;
+}
+
 body {
-    font-weight: 14px;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.container > div.main {
+    margin-top: 20px;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container header nav ul li {
+    display: inline;
+}
+
+header nav li a {
+    text-decoration: none;
+}
+
+#about > div {
+    width: 25%;
+    float: left;
+}
+
+#resources li {
+    list-style: none;
+}
+
+.container > footer {
+    margin-top: 20px;
 }
