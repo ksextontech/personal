@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+/* -------------------------------------------------- */
+/* BASIC SETUP */
+/* -------------------------------------------------- */
 
 * {
     margin: 0;
@@ -6,46 +8,130 @@
     box-sizing: border-box; /* the width and height specified for elements includes padding and border  */
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin: 10px auto;
+html {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
 }
 
-body {
-    font-size: 15px;
-    font-family: 'Open Sans', sans-serif;
-}
+/* -------------------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* -------------------------------------------------- */
 
+/* ----- LAYOUT ----- */
 .container {
-    width: 1140px;
+    max-width: 1140px;
     margin: 0 auto;
 }
 
-.container > div.main {
-    margin-top: 20px;
-    width: 100%;
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
 }
 
-img {
-    max-width: 100%;
+
+/* ----- UTILITY ----- */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
-.container header nav ul li {
-    display: inline;
+
+/* ----- HEADINGS ----- */
+h1 {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-size: 240%;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 4px;
 }
 
-header nav li a {
+
+/* ----- BUTTONS ----- */
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
     text-decoration: none;
+    color: #fff;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+    margin-right: 15px;
 }
 
-#about > div {
-    width: 25%;
-    float: left;
+.btn-full:link,
+.btn-full:visited {
+    background-color: #2980b9;
+    border: 1px solid #2980b9;
+    
 }
 
-#resources li {
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #2980b9;
+    color: white;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #236d9d;
+    border: 1px solid #236d9d;
+}
+
+
+/* ----- IMAGES ----- */
+img { max-width: 100%; }
+
+/* -------------------------------------------------- */
+/* HEADER */
+/* -------------------------------------------------- */
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('../assets/images/profile.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* 100% of the view port */
+}
+
+header > div {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* translates half of the width and height, up and to the left */
+    color: white;
+}
+
+header nav ul {
+    float: right;
     list-style: none;
+    margin-top: 55px;
 }
 
-.container > footer {
-    margin-top: 20px;
+header nav ul li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+header nav li a:link,
+header nav li a:visited {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+    padding-bottom: 5px;
+}
+
+header nav li a:hover,
+header nav li a:active {
+    border-bottom: 2px solid #2980b9;
 }
