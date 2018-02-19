@@ -8,6 +8,10 @@
     box-sizing: border-box; /* the width and height specified for elements includes padding and border  */
 }
 
+*:focus {
+    border: none; /* gets rid of focus borders on inputs, this can be overriden for specific forms or inputs */
+}
+
 html {
     background-color: #fff;
     color: #555;
@@ -15,6 +19,18 @@ html {
     font-size: 20px;
     font-weight: 300;
     text-rendering: optimizeLegibility;
+}
+
+a:link,
+a:visited {
+    color: #2980b9;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover,
+a:active {
+    color: #236d9d;
 }
 
 /* -------------------------------------------------- */
@@ -34,10 +50,12 @@ html {
 
 section {
     padding: 80px 0;
+    background-color: #f7f7f7;
 }
 
 
 /* ----- UTILITY ----- */
+.clearfix { zoom: 1; }
 .clearfix::after {
     content: "";
     display: table;
@@ -48,7 +66,10 @@ section {
 /* ----- HEADINGS ----- */
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
     font-weight: 300;
     text-transform: uppercase;
 }
@@ -65,7 +86,6 @@ h1 {
 h2 {
     margin-bottom: 30px;
     font-size: 180%;
-    text-align: 300;
     word-spacing: 2px;
     text-align: center;
     letter-spacing: 1px;
@@ -136,6 +156,7 @@ header {
     background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('../assets/images/profile.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed; /* creates a cool scrolling effect */
     height: 100vh; /* 100% of the view port */
 }
 
@@ -173,4 +194,50 @@ header nav li a:visited {
 header nav li a:hover,
 header nav li a:active {
     border-bottom: 2px solid #2980b9;
+}
+
+/* -------------------------------------------------- */
+/* RESUME */
+/* -------------------------------------------------- */
+section#resume {
+    background-color: #fff;
+}
+
+/* -------------------------------------------------- */
+/* RESOURCES */
+/* -------------------------------------------------- */
+
+section#resources {
+    background-color: #fff;
+}
+
+section#resources p {
+    margin: 10px 0;
+}
+
+section#resources li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+section#resources h3 {
+    text-align: center;
+}
+
+section#resources h3,
+section#resources h4 {
+    margin: 15px auto;
+}
+
+/* -------------------------------------------------- */
+/* FOOTER */
+/* -------------------------------------------------- */
+footer {
+    background-color: #333;
+    color: #999;
+    padding: 20px 0;
+}
+
+footer p {
+    text-align: center;
 }
