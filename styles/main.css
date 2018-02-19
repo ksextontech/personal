@@ -12,13 +12,15 @@
     border: none; /* gets rid of focus borders on inputs, this can be overriden for specific forms or inputs */
 }
 
-html {
+html,
+body {
     background-color: #fff;
     color: #555;
     font-family: 'Lato', 'Arial', sans-serif;
     font-size: 20px;
     font-weight: 300;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
 }
 
 a:link,
@@ -207,25 +209,25 @@ section#resume {
 /* RESOURCES */
 /* -------------------------------------------------- */
 
-section#resources {
+#resources {
     background-color: #fff;
 }
 
-section#resources p {
+#resources p {
     margin: 10px 0;
 }
 
-section#resources li {
+#resources li {
     list-style: none;
     margin-left: 20px;
 }
 
-section#resources h3 {
+#resources h3 {
     text-align: center;
 }
 
-section#resources h3,
-section#resources h4 {
+#resources h3,
+#resources h4 {
     margin: 15px auto;
 }
 
